@@ -1,0 +1,100 @@
+
+                         ------------------------DATA STRUCTURE  AND ALGORITHMS in Java--------------------------------------------------
+
+
+---------------------------------------------------------JAVA DATA STRUCTURE--------------------------------------------------------------
+Data Structure:- It is the way by which we can store the data in efficient way. time space
+
+
+                                                -------Types of Data Structure----------
+
+                          Primitive DS                                                      Non- Primitive DS
+                                                                                        Linear DS                           Non-Linear DS
+                           eg. boolean                                                  eg:String,arrays                   eg:graph,trees
+                              char                                                         list,set,queue,arraylist
+                              byte, short, int, long                                       linked hash set,hashmap,
+                              float double                                                 linked hashmap etc
+
+
+              ----------------         Arrays
+                                   (objects)
+1. Arrays can store primitive & non-primitive type of data
+int[] a={ 10, 20, 30};
+2 Array can store only homogeneous type of data
+3. array size is fixed, We cannot increase or decrease the size of an assay at runtime.
+4. Arrays are inbuilt feature of java & thus we have to develop algorithms
+
+
+
+   ------------------------   Collection Frameworks
+1. Collection Framework can contain only non-primitive type of data
+Arraylist al=hus Arraylist();
+ al.add (obj1);
+ al. add (10); al.add('z');
+2. We can store heterogeneous type of data  (different)
+3. We can increase or decrease the size of collections at runtime.
+4. Collection framework is an API which provides predefined classes. interfaces & methods.
+
+
+-------------------------Time Complexity----------------
+1.Its amount of time taken by algorithm to run.
+2.The input processed by an algorithm helps in determining the time complexity.
+
+------------------------Space Complexity--------------------
+1.Its amount of memory or space taken by algorithm to run.
+2.The memory required to process the input by an algorithm helps in determining the space complexity.
+
+------------------------Asymptotic Analysis------------------------
+1.Asymptotic analysis helps in evaluating performance of an algorithm in terms of input size and its increase.
+2.Using asymptotic analysis we don’t measure actual running time of algorithm.
+3.It helps in determining how time and space taken by algorithm increases with input size.
+
+Asymptotic Notations
+
+» Asymptotic Notations are the mathematical tools used to describe the running time of an algorithm in terms of input size.
+© Example — Performance of car in 1 litre of petrol
+Ely (min traffic) — 25 km/litre
+City (max traffic) - 15 km/litre
+City + Highway (avg traffic)- 20 km/litre
+
+Asymptotic Notations help us in determining
+1. Best Case
+2. Average Case
+3. Worst Case
+
+Types of Asymptotic Notations
+There are three notations for performing runtime analysis of an algorithm
+1.Omega(Q) Notation
+2.Big O (O) Notation
+3.Theta (O) Notation
+
+  ------Omega(Q) Notation
+1.It is the formal way to express the lower bound of an algorithm's at runtime
+2.Lower bound means for any given input this notation determines best amount of time an algorithm can take to complete.
+
+For example —
+If we say certain algorithm takes 100 secs as best amount of time. So, 100 secs will be lower bound of that algorithm. The algorithm can take more than 100 secs but it will not take less
+apt a ROl ORL oho
+
+----------Big O(O) Notation
+
+1.It is the formal way to express the upper bound of an algorithm's at runtime
+2.Upper bound means for any given input this notation determines longest amount of time an algorithm can take to complete.
+
+For example —
+If we say certain algorithm takes 100 secs as longest amount of time. So, 100 secs will be upper bound of that algorithm. The algorithm can take less than 100 secs but it will not take more
+than 100 secs.
+
+------------Theta(O) Notation
+
+1.It is the formal way to express both the upper and lower bound of an algorithm's running time.
+2.By Lower and Upper bound means for any given input this notation determines average amount of time an algorithm can take to complete. .
+
+For example — If we run certain algorithm and it takes 100 secs for first run, 120 secs for second run, 110 for third run and so on. So, theta notations gives an average of running time of that algorithm.
+
+
+
+
+
+
+
