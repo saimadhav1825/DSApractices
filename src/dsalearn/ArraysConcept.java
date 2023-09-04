@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ArraysConcept {
     public static void main(String[] args) {
         twoDimensionalArray();
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int[] arr = new int[10];
         System.out.println(arr[1]);
         System.out.println("Before Scanner");
@@ -14,7 +14,7 @@ public class ArraysConcept {
             arr[i] = scanner.nextInt();
         }
         System.out.println("After Scanner");
-        System.out.println(Arrays.toString(arr));*/
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void twoDimensionalArray() {
