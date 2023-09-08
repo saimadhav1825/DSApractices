@@ -54,32 +54,6 @@ public class LinearSearchProblems {
         for (int i = start; i <= end; i++) if (arr[i] == item) return i;
         return Integer.MAX_VALUE;
     }
-    //You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.
-    //
-    //Return the single element that appears only once.
-    //
-    //Your solution must run in O(log n) time and O(1) space.
-
-    //Example 1:
-    //
-    //Input: nums = [1,1,2,3,3,4,4,8,8]
-    //Output: 2
-
-    private static int singleNonDuplicate(int[] arr) {
-        Arrays.sort(arr);
-        int num = Integer.MAX_VALUE;
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i <= arr.length - 1; i++) {
-            if (map.get(i) != null) {
-                if (map.get(i) != arr[i]) {
-                    num = map.get(i);
-                }
-            } else {
-                map.put(0, map.get(0));
-            }
-        }
-        return num;
-    }
 
     //find the minimum num in the arrau
     public static int minimumNumInArray(int[] arr) {
