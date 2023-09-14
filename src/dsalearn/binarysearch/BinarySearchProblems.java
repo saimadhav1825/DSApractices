@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class BinarySearchProblems {
     public static void main(String[] args) {
 
-        int[] ascArray = {-20, -5, -1, 0, 2, 3, 6, 7, 10, 11, 22, 25, 35, 67, 89};
-        System.out.println("Find Element Index In Binary Search --" + findElementIndexInInfiniteArray(ascArray, 22));
+        int[] ascDescArray = {1, 2, 3, 4, 5, 4, 3, 2, 1};
+        System.out.println("Find Element Index In Binary Search --" + peakIndexInaMountainArray(ascDescArray));
     }
 
     //Sorted Array
@@ -28,9 +28,7 @@ public class BinarySearchProblems {
 
     //OrderDiagnosticsBinarySearch ->To Check Given Array is Ascending Order Or Descending Order
 
-    public static int OrderDiagnosticsBinarySearch(int[] arr, int target) {
-        int start = 0;
-        int end = arr.length - 1;
+    public static int orderDiagnosticsBinarySearch(int[] arr, int target, int start, int end) {
         boolean isAsc = arr[start] < arr[end];
         while (start <= end) {
             int mid = start + (end - start) / 2;
@@ -175,4 +173,33 @@ public class BinarySearchProblems {
         }
         return -1;
     }
+
+    //https://leetcode.com/problems/peak-index-in-a-mountain-array/ easy
+    //https://leetcode.com/problems/find-peak-element/     hard
+
+    public static int peakIndexInaMountainArray(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start < end) {
+            int mid = start + (end - start) / 2;
+            if (arr[mid] > arr[mid + 1]) {
+                end = mid;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return start;
+    }
+
+    //https://leetcode.com/problems/find-in-mountain-array/
+    public static int findInMountainArray(int[] arr, int taget) {
+        int peak = peakIndexInaMountainArray(arr);
+        int firstHalf = orderDiagnosticsBinarySearch(arr, taget, 0, peak);
+        if (firstHalf != -1) return firstHalf;
+
+        return orderDiagnosticsBinarySearch(arr, taget, peak, arr.length - 1);
+    }
+
+    //https://leetcode.com/problems/search-in-rotated-sorted-array/
+
 }
