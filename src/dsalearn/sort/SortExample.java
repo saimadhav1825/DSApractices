@@ -17,8 +17,10 @@ public class SortExample {
 
     public static void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
+            // for each step, max item will come at the last respective index
             boolean isSwaped = false;
             for (int j = 1; j < arr.length - i; j++) {
+                // swap if the item is smaller than the previous item
                 if (arr[j] < arr[j - 1]) {
                     int swap = arr[j];
                     arr[j] = arr[j - 1];
@@ -26,13 +28,14 @@ public class SortExample {
                     isSwaped = true;
                 }
             }
+            // if you did not swap for a particular value of i, it means the array is sorted hence stop the program
             if (!isSwaped) break;
         }
     }
 
     public static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            // find the maximum number index to swap the number
+            // find the max item in the remaining array and swap with correct index
             int last = arr.length - i - 1;
             int maxIndex = maxIndex(arr, 0, last);
             swapNumbers(arr,maxIndex,last);
