@@ -7,10 +7,9 @@ import java.util.Set;
 public class LeetCodeArrayProblems {
     public static void main(String[] args) {
 
-        int[] duplicateNums = {1, 2, 3, 1};
-        String haystack = "abc", needle = "c";
-        System.out.println("Contains Duplicate " + strStr(haystack, needle));
     }
+
+
 
     //Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
     //Input: nums = [1,2,3,1]
